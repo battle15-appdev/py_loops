@@ -1,3 +1,8 @@
+""" 
+This Program greets a user, then displays 
+the number of times that they have logged in
+"""
+
 class User:
     def __init__(self, first_name, last_name, age, location):
         self.first_name = first_name
@@ -17,6 +22,7 @@ class User:
         print(f"Hello {self.first_name}!")
 
     def increment_login_attempts(self):
+        """ Increases Login Attempt number"""
         self.login_attempts += 1
 
     def reset_login_attempts(self):
@@ -27,14 +33,8 @@ user_0 = User('lily', 'white', 32, 'london')
 User.define_user(user_0)
 User.greet_user(user_0)
 
-user_1 = User('mandy', 'brown', 23, 'paris')
-User.define_user(user_1)
-User.greet_user(user_1)
 
-user_2 = User('kelly', 'black', 53, 'brazil')
-User.define_user(user_2)
-User.greet_user(user_2)
-
+# Login attempt number increases for each function call
 user_0.increment_login_attempts()
 user_0.increment_login_attempts()
 user_0.increment_login_attempts()
